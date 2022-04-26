@@ -15,10 +15,10 @@
         <div class="Pedigree">
         <h1>Pedigree of: {{ $dog->regName }} </h1>
        </div>
-        <div class="CallName">Call Name  :  <strong> {{ $dog->callName }}</strong> </div>
-        <div class="Birthday">Date of Birth:   <strong>{{ \Carbon\Carbon::parse($dog->birthday)->format('l jS \of F Y ') }}</strong> </div>
-        <div class="Colour">Colour:  <strong>{{ $dog->colour }}</strong></div>
-        <div class="Sex">Sex  : <strong> {{ $dog->sex }}</strong>   </div>
+        <div class="CallName">Call Name:     <strong> {{ $dog->callName }}</strong> </div>
+        <div class="Birthday">Date of Birth:    <strong>{{ \Carbon\Carbon::parse($dog->birthday)->format('l jS \of F Y ') }}</strong> </div>
+        <div class="Colour">Colour:   <strong>{{ $dog->colour }}</strong></div>
+        <div class="Sex">Sex:    <strong> {{ $dog->sex }}</strong>   </div>
         <div class="Footer">
              
         </div>

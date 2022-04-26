@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Pedigree') }}
+            {{ __('Add Dogs To The Database') }}
         </h2>
     </x-slot>
 
@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in to the pedi page!
+                  Enter the Dog's Credentials
                 </div>
 <x-panel>
                 <form action="/store" method="POST" enctype="multipart/form-data">
@@ -18,6 +18,8 @@
                     <x-form.input name="callName"/>
         
                     <x-form.input name="regName"/>
+
+                    <x-form.input name="slug"/>   
 
                     <x-form.field>
                         <x-form.label name="sire" />
@@ -52,11 +54,18 @@
                     <x-form.textarea name="clearances"/>
                     <x-form.input name="birthday" type="date"/>
                     <x-form.input name="pic" type="file"/>
-                    <x-form.input name="wpage" type="url"/>
+                    <x-form.input name="wpage"/>
                     <x-form.input name="dogstat"/>
                     <x-form.input name="colour"/>
                     <x-form.input name="sex"/>
                     <x-form.textarea name="blurb"/>
+                    @if($errors->any())
+                    <ul>
+                        @foreach($errors->all() as $error)
+                        <li class="text-red-500 text-xs">{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                @endif
                  <x-form.button>Add Dog</x-form.button>
                  </form>
                  

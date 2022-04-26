@@ -31,5 +31,5 @@ Route::get('/dogs/index',[DogController::class,'index'])->name('list_dog');
 Route::get('/dogs/create',[DogController::class,'create'])->name('create_dog');
 Route::get('/dogs/edit/{dog}',[DogController::class, 'edit']);
 Route::patch('/dogs/update/{dog}', [DogController::class, 'update'])->name('update_dog');
-Route::get('/dogs/show',[DogController::class,'show']);
+Route::get('/dogs/show/{dog}',[DogController::class,'show']);
 Route::post('/store',[DogController::class,'store']);

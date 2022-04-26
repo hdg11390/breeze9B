@@ -66,7 +66,7 @@
                             @endforeach
                         </ul>
                     @endif
-                 <x-form.button>Edit Dog</x-form.button>
+                 <x-form.button>Update Dog</x-form.button>
                  </form>
                  
             </x-panel>
